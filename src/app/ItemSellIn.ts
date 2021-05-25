@@ -1,15 +1,15 @@
 export class ItemSellIn {
-  private value: number
+  private readonly value: number
 
   constructor(value: number) {
     this.value = value
   }
 
-  decrease = ():ItemSellIn => {
-    return new ItemSellIn(this.value - 1);
+  decrease() {
+    return new ItemSellIn(this.value - 1)
   }
 
-  isLessThan = (days: number):boolean => {
-    return this.value < days;
+  isLessThan(days: number) {
+    return this.value < days
   }
 }

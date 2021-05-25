@@ -1,7 +1,5 @@
 export class GildedRose {
-  updateQuality(items: any[]): void {
-    items.forEach(item => {
-      item.update()
-    });
+  updateQuality(items: any[]) {
+    items.forEach(item => item.update())
   }
 }

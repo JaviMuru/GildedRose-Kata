@@ -1,5 +1,7 @@
 import { GildedRose } from "../app/GildedRose";
 import { ItemFactory } from "../app/ItemFactory";
+import {ItemSellIn} from "../app/ItemSellIn";
+import {ItemQuality} from "../app/ItemQuality";
 
 describe('GildedRose', () => {
   it('should decreased sellIn value', ()=> {
@@ -8,7 +10,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.sellIn).toBe(9)
+    expect(item.sellIn).toEqual(new ItemSellIn(9))
   })
 
   it('should decreased quality value', ()=> {
@@ -17,7 +19,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(9)
+    expect(item.quality).toEqual(new ItemQuality(9))
   })
 
   it('should testThatQualityDecreasesTwiceAsMuchWhenSellByIsPassed', ()=> {
@@ -26,7 +28,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(8)
+    expect(item.quality).toEqual(new ItemQuality(8))
   })
 
   it('quality should never be negative', ()=> {
@@ -35,7 +37,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(0)
+    expect(item.quality).toEqual(new ItemQuality(0))
   })
 
 
@@ -45,7 +47,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(2)
+    expect(item.quality).toEqual(new ItemQuality(2))
   })
 
 
@@ -55,7 +57,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(50)
+    expect(item.quality).toEqual(new ItemQuality(50))
   })
 
   it('should test Sulfuras never changes', () => {
@@ -64,8 +66,8 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(25)
-    expect(item.sellIn).toBe(0)
+    expect(item.quality).toEqual(new ItemQuality(25))
+    expect(item.sellIn).toEqual(new ItemSellIn(0))
   })
 
 
@@ -75,7 +77,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(21)
+    expect(item.quality).toEqual(new ItemQuality(21))
   })
 
 
@@ -85,7 +87,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(22)
+    expect(item.quality).toEqual(new ItemQuality(22))
   })
 
 
@@ -95,7 +97,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(23)
+    expect(item.quality).toEqual(new ItemQuality(23))
   })
 
 
@@ -105,6 +107,6 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
-    expect(item.quality).toBe(0)
+    expect(item.quality).toEqual(new ItemQuality(0))
   })
 })

@@ -1,16 +1,16 @@
-import { Item } from "./Item";
-import {ItemName} from "./ItemName";
-import {ItemSellIn} from "./ItemSellIn";
-import {ItemQuality} from "./ItemQuality";
+import { Item } from "./Item"
+import { ItemName } from "./ItemName"
+import { ItemSellIn } from "./ItemSellIn"
+import { ItemQuality } from "./ItemQuality"
 
 export class AgedBrie extends Item {
-  private static DOUBLE_QUALITY_DECREMENT_SELL_IN_THRESHOLD = 0;
+  private static DOUBLE_QUALITY_DECREMENT_SELL_IN_THRESHOLD = 0
 
   constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality) {
-    super(name, sellIn, quality);
+    super(name, sellIn, quality)
   }
 
-  update = (): void => {
+  update() {
     this.decreaseSellIn()
 
     this.increaseQuality()

@@ -1,6 +1,6 @@
-import {ItemName} from "./ItemName";
-import {ItemSellIn} from "./ItemSellIn";
-import {ItemQuality} from "./ItemQuality";
+import { ItemName } from "./ItemName"
+import { ItemSellIn } from "./ItemSellIn"
+import { ItemQuality } from "./ItemQuality"
 
 export abstract class Item {
   name: ItemName
@@ -21,21 +21,21 @@ export abstract class Item {
     return this.sellIn.isLessThan(days);
   }
 
-  increaseQuality = ():void => {
-    this.quality = this.quality.increase();
+  increaseQuality() {
+    this.quality = this.quality.increase()
   }
 
   decreaseQuality() {
-    this.quality = this.quality.decrease();
+    this.quality = this.quality.decrease()
   }
 
   resetQuality() {
-    this.quality = this.quality.reset();
+    this.quality = this.quality.reset()
   }
 
   toString() {
-    return this.name + ", " + this.sellIn + ", " + this.quality;
+    return this.name + ", " + this.sellIn + ", " + this.quality
   }
 
-  update = () => {}
+  update() {}
 }
