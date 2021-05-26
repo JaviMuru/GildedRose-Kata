@@ -22,7 +22,7 @@ describe('GildedRose', () => {
     expect(item.quality).toEqual(new ItemQuality(9))
   })
 
-  it('should testThatQualityDecreasesTwiceAsMuchWhenSellByIsPassed', ()=> {
+  it('should test quality decreases twice as much when sell by is passed', ()=> {
     const item = new ItemFactory("whatever", 0, 10)
 
     const gildedRose = new GildedRose()
@@ -31,7 +31,7 @@ describe('GildedRose', () => {
     expect(item.quality).toEqual(new ItemQuality(8))
   })
 
-  it('quality should never be negative', ()=> {
+  it('should test quality is never negative', ()=> {
     const item = new ItemFactory("whatever", 0, 0)
 
     const gildedRose = new GildedRose()
@@ -41,7 +41,7 @@ describe('GildedRose', () => {
   })
 
 
-  it('testAgedBrieIncreasesQualityWithAge', () => {
+  it('should test AgedBrie increases quality with age', () => {
     const item = new ItemFactory("Aged Brie", 5, 1)
 
     const gildedRose = new GildedRose()
@@ -51,7 +51,7 @@ describe('GildedRose', () => {
   })
 
 
-  it('testQualityNeverIncreasesPastFifty', () => {
+  it('should test quality never increases past fifty', () => {
     const item = new ItemFactory("Aged Brie", 5, 50)
 
     const gildedRose = new GildedRose()
@@ -71,7 +71,7 @@ describe('GildedRose', () => {
   })
 
 
-  it('testBackstagePassIncreasesQualityByOneIfSellByGreaterThenTen', () => {
+  it('should test BackstagePass increases quality by one if sell by greater than ten', () => {
     const item  = new ItemFactory("Backstage passes to a TAFKAL80ETC concert", 11, 20)
 
     const gildedRose = new GildedRose()
@@ -81,7 +81,7 @@ describe('GildedRose', () => {
   })
 
 
-  it('testBackstagePassIncreasesQualityByTwoIfSellBySmallerThanTen', () => {
+  it('should test BackstagePass increases quality by two if sell by smaller than ten', () => {
     const item = new ItemFactory("Backstage passes to a TAFKAL80ETC concert", 6, 20)
 
     const gildedRose = new GildedRose()
@@ -91,7 +91,7 @@ describe('GildedRose', () => {
   })
 
 
-  it('testBackstagePassIncreasesQualityByThreeIfSellBySmallerThanFive', () => {
+  it('should test BackstagePass increases quality by three if sell by smaller than five', () => {
     const item = new ItemFactory("Backstage passes to a TAFKAL80ETC concert", 5, 20)
 
     const gildedRose = new GildedRose()
@@ -101,7 +101,7 @@ describe('GildedRose', () => {
   })
 
 
-  it('should testBackstagePassLosesValueAfterSellByPasses', () => {
+  it('should test BackstagePass loses value after sell by passes', () => {
     const item = new ItemFactory("Backstage passes to a TAFKAL80ETC concert", 0, 20)
 
     const gildedRose = new GildedRose()

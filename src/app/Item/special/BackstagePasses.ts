@@ -7,7 +7,6 @@ const DOUBLE_QUALITY_INCREASE_SELL_IN_THRESHOLD = 10
 const TRIPLE_QUALITY_INCREASE_SELL_IN_THRESHOLD = 5
 const QUALITY_RESET_SELL_IN_THRESHOLD = 0
 
-
 export class BackstagePasses extends Item {
   constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality ) {
     super(name, sellIn, quality)
