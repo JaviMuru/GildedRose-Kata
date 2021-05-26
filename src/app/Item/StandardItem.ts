@@ -3,10 +3,11 @@ import { ItemSellIn } from "./ItemSellIn"
 import { ItemName } from "./ItemName"
 import { ItemQuality } from "./ItemQuality"
 
-export class StandardItem extends Item {
-  private static DOUBLE_QUALITY_DECREASE_SELL_IN_THRESHOLD: number = 0
+const DOUBLE_QUALITY_DECREASE_SELL_IN_THRESHOLD = 0
 
-  constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality) {
+export class StandardItem extends Item {
+
+  constructor(name: string, sellIn: number, quality: number) {
     super(name, sellIn, quality)
   }
 
@@ -14,7 +15,7 @@ export class StandardItem extends Item {
     this.decreaseSellIn()
     this.decreaseQuality()
 
-    if (this.hasToBeSoldInLessThan(StandardItem.DOUBLE_QUALITY_DECREASE_SELL_IN_THRESHOLD)) {
+    if (this.hasToBeSoldInLessThan(DOUBLE_QUALITY_DECREASE_SELL_IN_THRESHOLD)) {
       this.decreaseQuality()
     }
   }

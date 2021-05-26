@@ -10,6 +10,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.sellIn).toEqual(new ItemSellIn(9))
   })
 
@@ -19,6 +20,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(9))
   })
 
@@ -28,6 +30,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(8))
   })
 
@@ -37,6 +40,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(0))
   })
 
@@ -47,6 +51,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(2))
   })
 
@@ -57,6 +62,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(50))
   })
 
@@ -66,7 +72,9 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(25))
+    // @ts-ignore
     expect(item.sellIn).toEqual(new ItemSellIn(0))
   })
 
@@ -77,6 +85,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(21))
   })
 
@@ -87,6 +96,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(22))
   })
 
@@ -97,6 +107,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(23))
   })
 
@@ -107,6 +118,7 @@ describe('GildedRose', () => {
     const gildedRose = new GildedRose()
     gildedRose.updateQuality([item])
 
+    // @ts-ignore
     expect(item.quality).toEqual(new ItemQuality(0))
   })
 })
