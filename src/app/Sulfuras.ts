@@ -1,10 +1,9 @@
 import { Item } from "./Item"
-import { ItemSellIn } from "./ItemSellIn"
-import { ItemQuality } from "./ItemQuality"
-import { ItemName } from "./ItemName"
 
 export class Sulfuras extends Item {
-  constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality) {
+  static NAME = "Sulfuras, Hand of Ragnaros"
+
+  constructor(name: string, sellIn: number, quality: number) {
     super(name, sellIn, quality)
   }
 

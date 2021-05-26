@@ -6,11 +6,12 @@ export abstract class Item {
   name: ItemName
   sellIn: ItemSellIn
   quality: ItemQuality
+  static NAME: string
 
-  constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality) {
-    this.name = name
-    this.sellIn = sellIn
-    this.quality = quality
+  constructor(rawName: string, rawSellIn: number, rawQuality: number) {
+    this.name = new ItemName(rawName)
+    this.sellIn = new ItemSellIn(rawSellIn)
+    this.quality = new ItemQuality(rawQuality)
   }
 
   decreaseSellIn() {
@@ -37,5 +38,5 @@ export abstract class Item {
     return this.name + ", " + this.sellIn + ", " + this.quality
   }
 
-  update() {}
+  abstract update()
 }

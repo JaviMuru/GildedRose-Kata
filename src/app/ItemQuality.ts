@@ -1,13 +1,13 @@
 import {ItemQualityOutOfRangeException} from "./Error"
 
-export class ItemQuality {
-  private static MAX_VALUE: number = 50
-  private static MIN_VALUE: number = 0
+const MAX_VALUE = 50
+const MIN_VALUE = 0
 
+export class ItemQuality {
   private readonly value: number
 
   constructor(value: number) {
-    if (value < ItemQuality.MIN_VALUE || value > ItemQuality.MAX_VALUE) {
+    if (value < MIN_VALUE || value > MAX_VALUE) {
       throw new ItemQualityOutOfRangeException(value)
     }
 
@@ -15,7 +15,7 @@ export class ItemQuality {
   }
 
   increase() {
-    if (this.value === ItemQuality.MAX_VALUE) {
+    if (this.value === MAX_VALUE) {
       return this
     }
 
@@ -23,7 +23,7 @@ export class ItemQuality {
   }
 
   decrease() {
-    if (this.value == ItemQuality.MIN_VALUE) {
+    if (this.value == MIN_VALUE) {
       return this
     }
 
@@ -31,6 +31,6 @@ export class ItemQuality {
   }
 
   reset() {
-    return new ItemQuality(ItemQuality.MIN_VALUE)
+    return new ItemQuality(MIN_VALUE)
   }
 }
