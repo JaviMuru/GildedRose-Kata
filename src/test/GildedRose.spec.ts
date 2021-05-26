@@ -1,7 +1,7 @@
-import { GildedRose } from "../app/GildedRose";
-import { ItemFactory } from "../app/ItemFactory";
-import {ItemSellIn} from "../app/ItemSellIn";
-import {ItemQuality} from "../app/ItemQuality";
+import { GildedRose } from "../app/GildedRose"
+import { ItemFactory } from "../app/Item/ItemFactory"
+import { ItemSellIn } from "../app/Item/ItemSellIn"
+import { ItemQuality } from "../app/Item/ItemQuality"
 
 describe('GildedRose', () => {
   it('should decreased sellIn value', ()=> {

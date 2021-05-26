@@ -2,9 +2,9 @@ import { ItemName } from "./ItemName"
 import { ItemQuality } from "./ItemQuality"
 import { ItemSellIn } from "./ItemSellIn"
 import { StandardItem } from "./StandardItem"
-import { AgedBrie } from "./AgedBrie"
-import { BackstagePasses } from "./BackstagePasses"
-import { Sulfuras } from "./Sulfuras"
+import { AgedBrie } from "./special/AgedBrie"
+import { BackstagePasses } from "./special/BackstagePasses"
+import { Sulfuras } from "./special/Sulfuras"
 
 export class ItemFactory {
   name: ItemName

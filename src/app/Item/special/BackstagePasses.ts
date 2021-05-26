@@ -1,7 +1,7 @@
-import { Item } from "./Item"
-import { ItemName } from "./ItemName"
-import { ItemSellIn } from "./ItemSellIn"
-import { ItemQuality } from "./ItemQuality"
+import { Item } from "../Item"
+import { ItemName } from "../ItemName"
+import { ItemSellIn } from "../ItemSellIn"
+import { ItemQuality } from "../ItemQuality"
 
 export class BackstagePasses extends Item {
   private static DOUBLE_QUALITY_INCREASE_SELL_IN_THRESHOLD = 10

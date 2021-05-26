@@ -1,7 +1,7 @@
-import { Item } from "./Item"
-import { ItemName } from "./ItemName"
-import { ItemSellIn } from "./ItemSellIn"
-import { ItemQuality } from "./ItemQuality"
+import { Item } from "../Item"
+import { ItemName } from "../ItemName"
+import { ItemSellIn } from "../ItemSellIn"
+import { ItemQuality } from "../ItemQuality"
 
 export class AgedBrie extends Item {
   private static DOUBLE_QUALITY_DECREMENT_SELL_IN_THRESHOLD = 0

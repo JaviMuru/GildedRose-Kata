@@ -1,4 +1,4 @@
-import {ItemQualityOutOfRangeException} from "./Error"
+import { ItemQualityOutOfRangeException } from "../Error"
 
 export class ItemQuality {
   private static MAX_VALUE: number = 50
