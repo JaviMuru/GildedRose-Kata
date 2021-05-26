@@ -8,10 +8,10 @@ export abstract class Item {
   quality: ItemQuality
   static NAME: string
 
-  constructor(name: string, sellIn: number, quality: number) {
-    this.name = new ItemName(name)
-    this.sellIn = new ItemSellIn(sellIn)
-    this.quality = new ItemQuality(quality)
+  constructor(rawName: string, rawSellIn: number, rawQuality: number) {
+    this.name = new ItemName(rawName)
+    this.sellIn = new ItemSellIn(rawSellIn)
+    this.quality = new ItemQuality(rawQuality)
   }
 
   decreaseSellIn() {
