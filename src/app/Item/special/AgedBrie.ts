@@ -6,6 +6,8 @@ import { ItemQuality } from "../ItemQuality"
 const DOUBLE_QUALITY_DECREMENT_SELL_IN_THRESHOLD = 0
 
 export class AgedBrie extends Item {
+  static NAME = "Aged Brie"
+
   constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality) {
     super(name, sellIn, quality)
   }

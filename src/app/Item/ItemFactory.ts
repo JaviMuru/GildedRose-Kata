@@ -16,18 +16,10 @@ export class ItemFactory {
     this.sellIn = new ItemSellIn(rawSellIn)
     this.quality = new ItemQuality(rawQuality)
 
-    if (this.name.isAgedBrie()) {
-      return new AgedBrie(this.name, this.sellIn, this.quality)
-    }
+    const Item = [AgedBrie, BackstagePasses, Sulfuras].find(Item => Item.NAME === rawName)
 
-    if (this.name.isBackstagePasses()) {
-      return new BackstagePasses(this.name, this.sellIn, this.quality)
-    }
-
-    if (this.name.isSulfuras()) {
-      return new Sulfuras(this.name, this.sellIn, this.quality)
-    }
-
-    return new StandardItem(this.name, this.sellIn, this.quality)
+    return (Item !== undefined )
+      ? new Item(this.name, this.sellIn, this.quality)
+      : new StandardItem(this.name, this.sellIn, this.quality)
   }
 }

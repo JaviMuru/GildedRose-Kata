@@ -6,6 +6,7 @@ export abstract class Item {
   name: ItemName
   sellIn: ItemSellIn
   quality: ItemQuality
+  static NAME: string
 
   constructor(name: ItemName, sellIn: ItemSellIn, quality: ItemQuality) {
     this.name = name
