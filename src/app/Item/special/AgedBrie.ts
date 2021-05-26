@@ -1,4 +1,4 @@
-import { Item } from "./Item/Item"
+import { Item } from "../Item"
 
 const DOUBLE_QUALITY_DECREMENT_SELL_IN_THRESHOLD = 0
 
@@ -11,6 +11,7 @@ export class AgedBrie extends Item {
 
   update() {
     this.decreaseSellIn()
+
     this.increaseQuality()
 
     if (this.hasToBeSoldInLessThan(DOUBLE_QUALITY_DECREMENT_SELL_IN_THRESHOLD)) {

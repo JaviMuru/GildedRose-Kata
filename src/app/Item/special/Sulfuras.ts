@@ -1,4 +1,4 @@
-import { Item } from "./Item/Item"
+import { Item } from "../Item"
 
 export class Sulfuras extends Item {
   static NAME = "Sulfuras, Hand of Ragnaros"

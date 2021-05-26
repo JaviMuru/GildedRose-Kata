@@ -1,4 +1,4 @@
-import { Item } from "./Item/Item"
+import { Item } from "../Item"
 
 const DOUBLE_QUALITY_INCREASE_SELL_IN_THRESHOLD = 10
 const TRIPLE_QUALITY_INCREASE_SELL_IN_THRESHOLD = 5

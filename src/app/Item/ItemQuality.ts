@@ -1,4 +1,4 @@
-import {ItemQualityOutOfRangeException} from "./Error"
+import { ItemQualityOutOfRangeException } from "../Error"
 
 const MAX_VALUE = 50
 const MIN_VALUE = 0
