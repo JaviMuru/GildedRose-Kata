@@ -1,5 +1,13 @@
+import {Item} from "./Item/Item";
+
 export class GildedRose {
-  updateQuality(items: any[]) {
-    items.forEach(item => item.update())
+  items: any[]
+
+  constructor(items: any[]) {
+    this.items = items
+  }
+
+  updateQuality() {
+    this.items.forEach(item => item.update())
   }
 }
